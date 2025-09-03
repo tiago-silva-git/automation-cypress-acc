@@ -8,6 +8,6 @@ Cypress.Commands.add("createUser", (username, password) => {
     expect(response.status).to.eq(201);
     expect(response.body.userID).to.exist;
 
-    return response.body.userID; // retorna o userId para ser usado nos testes
+    return response.body.userID; // returns the userId to be used in tests
   });
 });
