@@ -34,9 +34,10 @@ Antes de iniciar, certifique-se de ter instalado:
 
 Verifique se o Node e o NPM estão instalados:
 
-```bash
+``
 node -v
 npm -v
+``
 
 ### 2. ✅ Instalação do Projeto
 
