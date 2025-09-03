@@ -43,22 +43,26 @@ npm -v
 
 Clone o repositório do projeto:
 
-```bash
+``
 git clone https://github.com/seu-usuario/nome-do-repo.git
+``
+``
 cd nome-do-repo
+``
 
 Instale as dependências do projeto:
 
-```bash
+``
 npm install
+``
 
 ### 3. 🚀 Executando os testes
 
 Modo interativo (Cypress UI):
 
-```bash
+``
 npx cypress open
-
+``
 
 - Será aberta a interface gráfica do Cypress.
 - Navegue até: cypress/e2e/tests/API/challenge_part_1.cy.js
@@ -66,8 +70,8 @@ npx cypress open
 
 🔹 Modo headless (linha de comando):
 
-```bash
+``
 npx cypress run
-
+``
 
 Isso executará todos os testes no terminal.
