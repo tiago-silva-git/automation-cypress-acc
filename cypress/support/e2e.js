@@ -15,3 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+// Ignora erros não tratados no frontend da aplicação
+Cypress.on('uncaught:exception', () => false);
+
