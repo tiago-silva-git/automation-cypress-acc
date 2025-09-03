@@ -34,7 +34,6 @@ Este projeto **não utiliza Page Objects tradicionais**. Em vez disso, segue a r
 |------------------|-----------|
 | [Node.js](https://nodejs.org/) | Ambiente de execução JavaScript |
 | [Cypress](https://www.cypress.io/) | Framework de automação de testes |
-| [Mocha](https://mochajs.org/) | Test Runner usado pelo Cypress |
 | [JavaScript (ES6+)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) | Linguagem utilizada nos testes |
 | [Faker JS](https://www.npmjs.com/package/@faker-js/faker) | Para gerar dados randomicamente |
 | [DemoQA API](https://demoqa.com/swagger/) | API pública utilizada no desafio |c
