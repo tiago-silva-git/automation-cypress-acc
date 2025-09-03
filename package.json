@@ -1,0 +1,15 @@
+{
+  "name": "automation_accenture",
+  "version": "1.0.0",
+  "description": "Accenture Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Tiago Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^15.0.0",
+    "moment": "^2.30.1"
+  }
+}
