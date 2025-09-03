@@ -4,6 +4,8 @@ const locators = {
     PRACTICE_FORM: "Practice Form",
     ALERTS_MENU: "Alerts, Frame & Windows",
     BROWSER_WINDOWS_MENU: "Browser Windows",
+    ELEMENTS_MENU: "Elements",
+    WEB_TABLES_MENU: "Web Tables",
   },
   FORM: {
     FIRST_NAME: "#firstName",
@@ -30,6 +32,21 @@ const locators = {
   BROWSER_WINDOWS: {
     NEW_WINDOW_BTN: "#windowButton",
     SAMPLE_HEADING: "#sampleHeading",
+  },
+  WEB_TABLES: {
+    ADD_BTN: "#addNewRecordButton",
+    FIRST_NAME: "#firstName",
+    LAST_NAME: "#lastName",
+    EMAIL: "#userEmail",
+    AGE: "#age",
+    SALARY: "#salary",
+    DEPARTMENT: "#department",
+    SUBMIT_BTN: "#submit",
+    EDIT_BTN: '[title="Edit"]',
+    DELETE_BTN: '[title="Delete"]',
+    ROW: "div.rt-tr-group",
+    CELL: "div.rt-td",
+    NO_DATA_TEXT: ".rt-noData",
   },
 };
 
