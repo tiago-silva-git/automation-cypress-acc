@@ -5,7 +5,7 @@ import { faker } from "@faker-js/faker";
 
 describe("Fill out the DemoQA form", () => {
   beforeEach(() => {
-    cy.visit("https://demoqa.com/");
+    cy.visit("/");
   });
 
   it("Should fill out and submit the form successfully", () => {
