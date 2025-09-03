@@ -54,6 +54,9 @@ Verifique se o Node e o NPM estão instalados:
 
 ``
 node -v
+``
+
+``
 npm -v
 ``
 
@@ -64,6 +67,7 @@ Clone o repositório do projeto:
 ``
 git clone https://github.com/seu-usuario/nome-do-repo.git
 ``
+
 ``
 cd nome-do-repo
 ``
@@ -75,6 +79,7 @@ npm install
 ``
 
 Caso precise:
+
 ``
 npm install @faker-js/faker --save-dev
 ``
