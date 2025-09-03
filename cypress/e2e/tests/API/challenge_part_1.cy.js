@@ -7,14 +7,9 @@ describe("API Challenge - DemoQA", () => {
   const password = generateRandomPassword();
   let userId, token, books;
 
-  it("should create a new user", () => {
-    cy.request("POST", "/Account/v1/User", {
-      userName: username,
-      password: password,
-    }).then((response) => {
-      expect(response.status).to.eq(201);
-      userId = response.body.userID;
-      expect(userId).to.exist;
+  before(() => {
+    cy.createUser(username, password).then((id) => {
+      userId = id;
     });
   });
 
@@ -44,7 +39,7 @@ describe("API Challenge - DemoQA", () => {
       books = response.body.books;
       expect(books.length).to.be.greaterThan(1);
 
-      cy.log(`📚 Livros disponíveis (${books.length}):`);
+      cy.log(`📚 Available books (${books.length}):`);
 
       books.forEach((book, index) => {
         const info = `${index + 1}. ${book.title}`;
@@ -77,7 +72,7 @@ describe("API Challenge - DemoQA", () => {
         .then((response) => {
           expect(response.status).to.eq(201);
 
-          cy.log("📚 Livros alugados aleatoriamente:");
+          cy.log("📚 Randomly rented books:");
           selectedBooks.forEach((book, index) => {
             const info = `${index + 1}. ${book.title} (ISBN: ${book.isbn})`;
             cy.log(info);
