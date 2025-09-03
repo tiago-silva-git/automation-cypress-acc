@@ -2,7 +2,7 @@
 
 const { generateRandomPassword, generateRandomUsername } = require("../../../support/utils");
 
-describe("Desafio API - DemoQA", () => {
+describe("API Challenge - DemoQA", () => {
   const username = generateRandomUsername();
   const password = generateRandomPassword();
   let userId, token, books;
