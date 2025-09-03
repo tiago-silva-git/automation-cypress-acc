@@ -65,11 +65,11 @@ npm -v
 Clone o repositório do projeto:
 
 ``
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone https://github.com/tiago-silva-git/automation-cypress-acc.git
 ``
 
 ``
-cd nome-do-repo
+cd automation-cypress-acc
 ``
 
 Instale as dependências do projeto:
