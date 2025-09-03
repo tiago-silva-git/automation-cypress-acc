@@ -2,6 +2,8 @@ const locators = {
   HOME: {
     FORMS_MENU: "Forms",
     PRACTICE_FORM: "Practice Form",
+    ALERTS_MENU: "Alerts, Frame & Windows",
+    BROWSER_WINDOWS_MENU: "Browser Windows",
   },
   FORM: {
     FIRST_NAME: "#firstName",
@@ -24,6 +26,10 @@ const locators = {
     SUBMIT_BTN: "#submit",
     MODAL_TITLE: "#example-modal-sizes-title-lg",
     CLOSE_MODAL_BTN: "#closeLargeModal",
+  },
+  BROWSER_WINDOWS: {
+    NEW_WINDOW_BTN: "#windowButton",
+    SAMPLE_HEADING: "#sampleHeading",
   },
 };
 
