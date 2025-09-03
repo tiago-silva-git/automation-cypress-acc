@@ -6,6 +6,7 @@ const locators = {
     BROWSER_WINDOWS_MENU: "Browser Windows",
     ELEMENTS_MENU: "Elements",
     WEB_TABLES_MENU: "Web Tables",
+    WIDGETS_MENU: "Widgets",
   },
   FORM: {
     FIRST_NAME: "#firstName",
@@ -47,6 +48,13 @@ const locators = {
     ROW: "div.rt-tr-group",
     CELL: "div.rt-td",
     NO_DATA_TEXT: ".rt-noData",
+  },
+  PROGRESS_BAR: {
+    START_STOP_BTN: "#startStopButton",
+    RESET_BTN: "#resetButton",
+    BAR_INNER: "#progressBar div[role='progressbar']",
+    PROGRESS_BAR_MENU: "Progress Bar",
+    VALUE_PROGRESS: "aria-valuenow",
   },
 };
 

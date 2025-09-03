@@ -115,4 +115,55 @@ describe("Fill out the DemoQA form", () => {
 
     cy.contains(locators.WEB_TABLES.CELL, firstName).should("not.exist");
   });
+
+  it("should control the progress bar: stop before 25% and complete to 100%", () => {
+    cy.contains(locators.HOME.WIDGETS_MENU).click();
+    cy.contains(locators.PROGRESS_BAR.PROGRESS_BAR_MENU).click();
+
+    // --- Step 1: Start and stop before 25% ---
+    cy.get(locators.PROGRESS_BAR.START_STOP_BTN).click();
+
+    function stopBefore25() {
+      cy.get(locators.PROGRESS_BAR.BAR_INNER)
+        .invoke("attr", "aria-valuenow")
+        .then((val) => {
+          const progress = parseInt(val, 10);
+          if (isNaN(progress) || progress < 1) {
+            cy.wait(20).then(stopBefore25); // wait for the progress bar to start
+          } else if (progress < 25) {
+            cy.wait(10).then(stopBefore25); // continue until 25%
+          } else {
+            cy.get(locators.PROGRESS_BAR.START_STOP_BTN).click();
+            cy.log(`Progress stopped at ${progress}% (before 25%)`);
+          }
+        });
+    }
+
+    stopBefore25();
+
+    // --- Step 2: Start again until 100% and reset ---
+    cy.get(locators.PROGRESS_BAR.START_STOP_BTN).click();
+
+    function waitUntil100() {
+      cy.get(locators.PROGRESS_BAR.BAR_INNER)
+        .invoke("attr", locators.PROGRESS_BAR.VALUE_PROGRESS)
+        .then((val) => {
+          const progress = parseInt(val, 10);
+          if (isNaN(progress) || progress < 100) {
+            cy.wait(20).then(waitUntil100);
+          } else {
+            // Click reset when progress >= 100
+            cy.get(locators.PROGRESS_BAR.RESET_BTN).click();
+            cy.log("Progress reached 100% and reset clicked");
+          }
+        });
+    }
+
+    waitUntil100();
+
+    // Validate that progress reset to 0
+    cy.get(locators.PROGRESS_BAR.BAR_INNER)
+      .invoke("attr", locators.PROGRESS_BAR.VALUE_PROGRESS)
+      .should("eq", "0");
+  });
 });
